@@ -40,9 +40,12 @@ end
 def add_s(array)
   new_array = []
   array.each_with_index.collect do |name, index|
-    unless index ==1
-      new_array << "#{name}s"
+    if index != 1
+      name = "#{name}s"
+      else
+    name
     end
+    new_array << name
   end
-  new_array.unshift(array[1])
+    new_array 
 end
